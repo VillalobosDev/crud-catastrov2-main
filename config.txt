@@ -1,0 +1,36 @@
+################################### TREEVIEWS ######################################
+ MODO CLARO
+
+    style = ttk.Style()
+    style.configure("Custom.Treeview", font=("Poppins", 12), rowheight=25)  
+    style.configure("Custom.Treeview.Heading", font=("Poppins", 14, "bold")) 
+    
+    
+    # Creando el treeview para mostrar los registros
+    frame_tree = ctk.CTkFrame(right_frame, fg_color='white', width=580, height=360)
+    frame_tree.pack(pady=10, padx=10, expand=True, fill="both")  
+
+    style = ttk.Style()
+    style.configure("Custom.Treeview", font=("Poppins", 12), rowheight=25)  
+    style.configure("Custom.Treeview.Heading", font=("Poppins", 14, "bold")) 
+
+    my_tree = ttk.Treeview(frame_tree, style="Custom.Treeview", show="headings")
+    my_tree.pack(pady=10, padx=10, fill="both", expand=True)
+    
+    horizontal_scrollbar = ttk.Scrollbar(frame_tree, orient="horizontal", command=my_tree.xview)
+
+    my_tree.configure(xscrollcommand=horizontal_scrollbar.set)
+
+    horizontal_scrollbar.pack(side="bottom", fill="x")
+
+    my_tree['columns'] = ( 'nombre', 'apellido', 'cedula', 'rif', 'telefono', 'correo')
+
+    for col in my_tree['columns']:
+        my_tree.heading(col, text=col.capitalize(), anchor='center')  # Con el metodo de string capitalize() mostramos el texto en mayusculas
+        my_tree.column(col, anchor='center')
+
+    canvas = ctk.CTkCanvas(frame_tree, width=0, height=0, highlightthickness=0, bg='white')
+    canvas.pack()  # Posicionamos el canvas
+    rectangle(canvas, 10, 10, 0, 0, r=5, fill='lightgray', outline='black')
+
+MODO OSCURO:

@@ -1,0 +1,23 @@
+{
+  "CTk": {
+    "fg_color": ["#FFF5E6", "#332100"],  
+    "bg_color": ["#FFFFFF", "#1A1A1A"]  
+  },
+  "CTkButton": {
+    "fg_color": ["#FF8C00", "#FFA500"],  
+    "hover_color": ["#FFD700", "#FF4500"],  
+    "text_color": ["#FFFFFF", "#FFFFFF"]    
+  },
+  "CTkLabel": {
+    "text_color": ["#FF8C00", "#FFA500"],  
+    "fg_color": ["#FFF5E6", "#332100"]   
+  },
+  "CTkEntry": {
+    "border_color": ["#FF8C00", "#FF4500"],  
+    "fg_color": ["#FFF5E6", "#332100"],  
+    "text_color": ["#000000", "#FFFFFF"]  
+  },
+  "CTkFrame": {
+    "fg_color": ["#FFE6CC", "#8B4500"]  
+  }
+}

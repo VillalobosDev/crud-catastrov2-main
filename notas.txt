@@ -1,0 +1,22 @@
+Centrar contenido dinamicamente manteniendo padding con la expasion de la ventana
+Se usa el metodo pack y usamos """ Anchor="center", expand=True """ 
+
+Ejemplo:
+
+contribuyente_btn = ctk.CTkButton(left_frame, text="Contribuyentes", command=lambda: print("Aca va la funcion de la ventana contribuyentes"), width=190, font=poppins20bold)
+contribuyente_btn.pack(pady=50, padx=50, anchor="center", expand=True)
+
+inmuebles_btn = ctk.CTkButton(left_frame, text="Inmuebles", command=lambda: print("Aca va la funcion de la ventana inmuebles"), width=190, font=poppins20bold)
+inmuebles_btn.pack( padx=50, anchor="center", expand=True)
+
+sector_btn = ctk.CTkButton(left_frame, text="Sectores", command=lambda: print("Aca va la funcion de la ventana sectores"), width=190, font=poppins20bold)
+sector_btn.pack(pady=50, padx=50, anchor="center", expand=True)
+
+#################################################################################
+
+Mala practica, pero a tener en cuenta:
+
+Se puede agregar padding en labels usando directamente espacios " " en los atributos text
+
+#################################################################################
+
