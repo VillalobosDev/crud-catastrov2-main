@@ -35,7 +35,7 @@ def close_after_timeout(root, timeout):
     root.after(timeout, root.destroy)
 
 
-#Este es para admin
+#Este es para administradores
 #menu(window)
 
 #Este es para usuarios
